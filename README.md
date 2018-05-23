@@ -1,5 +1,7 @@
 # Arg
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zeit/arg.svg)](https://greenkeeper.io/)
+
 `arg` is yet another command line option parser.
 
 ## Installation
