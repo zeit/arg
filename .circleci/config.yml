@@ -1,7 +1,27 @@
 version: 2
 jobs:
   build:
-    machine: true
+    working_directory: ~/repo
+
+    docker:
+      # Node.js 6 EOL 2019-04-01
+      - image: circleci/node:6
+
     steps:
+      
       - checkout
-      - run: docker build -f .circleci/Dockerfile .
+
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+
+      - run: yarn install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+
+      - run: yarn test
+
+      # requires CODECOV_TOKEN env var to be set
+      - run: yarn run upload-codecov

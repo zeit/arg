@@ -13,7 +13,8 @@
   ],
   "scripts": {
     "pretest": "xo",
-    "test": "WARN_EXIT=1 jest --coverage -w 2"
+    "test": "WARN_EXIT=1 jest --coverage -w 2",
+    "upload-codecov": "codecov"
   },
   "xo": {
     "rules": {
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
+    "codecov": "^3.2.0",
     "jest": "^20.0.4",
     "xo": "^0.18.2"
   }

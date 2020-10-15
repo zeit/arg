@@ -1,4 +1,4 @@
-# Arg [![CircleCI](https://circleci.com/gh/zeit/arg.svg?style=svg)](https://circleci.com/gh/zeit/arg)
+# Arg [![CircleCI](https://circleci.com/gh/zeit/arg.svg?style=svg)](https://circleci.com/gh/zeit/arg) ![codecov](https://codecov.io/gh/zeit/arg/branch/master/graph/badge.svg)
 
 `arg` is yet another command line option parser.
 
