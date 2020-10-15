@@ -4,4 +4,4 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker build -f .circleci/Dockerfile .
+      - run: docker build --build-arg CODECOV_TOKEN="$CODECOV_TOKEN" -f .circleci/Dockerfile .
